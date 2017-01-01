@@ -11,21 +11,6 @@
 
 	var weatherAPIkey = 'bfc0ae72e81bf2384896786a428a855f';
 
-	var availableImages = [
-		'http://res.cloudinary.com/dnhbktlnw/image/upload/v1473219467/pexels-photo-129105_hlw4tm.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135685/destiny_aqjlvx.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135685/warhammer40k_rdjkpn.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135685/destiny1_nirhhw.png',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135684/destiny2_i5d4zd.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135685/warhammer40k1_feyft3.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135426/test_oqh6lc.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135408/3ada89b6e90da1643f11630432a14a2b_fldud6.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135408/bg-01_kwh6tj.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135407/wallup-20650_2_zrbdrw.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135408/Y2H5t1J_t624eh.jpg',
-		'http://res.cloudinary.com/mrbloblbloob/image/upload/v1483135417/pexels-photo-198007_pof7zy.jpg'
-	];
-
 	function makeXHR(callback, url) {
 		var xhr = new XMLHttpRequest();
 
@@ -181,8 +166,8 @@
 		};
 
 		// Personal images
-		image.src = availableImages[Math.floor(Math.random() * availableImages.length)];
-		// image.src = 'https://unsplash.it/1920/1200/?random';
+		// image.src = 'https://unsplash.it/1920/1200/?random'; // random fixed size
+		image.src = 'https://source.unsplash.com/daily';
 	}
 
 	function emptyStorageIfExpired () {

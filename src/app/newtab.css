@@ -119,6 +119,7 @@ main {
     cursor: default;
     max-width: 40rem;
     line-height: 1.4;
+    padding: 0 1rem;
 }
 
 .quote .quote-author {
@@ -192,7 +193,7 @@ main {
 .popper {
     position: absolute;
     cursor: pointer;
-    right: -3rem;
+    right: -2.9rem;
     bottom: 0;
     width: 3rem;
     height: 3rem;
@@ -243,4 +244,8 @@ main {
 		width: 100%;
 		margin: 0;
 	}
+
+    .clock {
+        margin: 1rem 0 0 0;
+    }
 }

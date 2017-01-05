@@ -52,7 +52,7 @@ main {
     margin: 1rem 0 0 1rem;
     z-index: 1;
     display: inline-block;
-    transition: opacity 400ms ease 500ms, color 200ms ease 0;
+    transition: opacity 400ms ease 500ms;
     opacity: 0;
     cursor: default;
 }
@@ -75,7 +75,7 @@ main {
     float: right;
     z-index: 1;
     display: inline-block;
-    transition: opacity 400ms ease 500ms, color 200ms ease 0;
+    transition: opacity 400ms ease 500ms;
     opacity: 0;
     cursor: default;
 }
@@ -102,7 +102,7 @@ main {
 
 .quote {
     position: absolute;
-    transition: opacity 400ms ease 500ms, color 200ms ease 0;
+    transition: opacity 400ms ease 500ms;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -117,6 +117,8 @@ main {
     margin-bottom: 0.5rem;
     display: inline-block;
     cursor: default;
+    max-width: 40rem;
+    line-height: 1.4;
 }
 
 .quote .quote-author {
@@ -126,6 +128,106 @@ main {
     cursor: default;
 }
 
+.settings {
+    opacity: 0;
+    position: absolute;
+    left: -17.4rem;
+    bottom: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 17rem;
+    height: 21rem;
+    background: white;
+    transition: left 0.3s cubic-bezier(0.16, 0.76, 0.67, 1.11) 0s, opacity 400ms ease 500ms;
+}
+
+.settings.open {
+    left: 0;
+}
+
+.settings.open > .popper{
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.07), 5px 0px 5px rgba(0, 0, 0, 0.03);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 99%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 99%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 99%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.controls {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+
+.controls > .row {
+    width: 100%;
+}
+
+.controls > .row > label {
+    color: #4a4a4a;
+}
+
+.controls > .row > .colors {
+    padding-top: 1rem;
+}
+
+.controls > .row .color {
+    background-color: attr(data-color, 'red');
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    transition: transform 200ms ease 0s;
+    cursor: pointer;
+}
+
+.controls > .row .color:hover {
+    transform: scale(1.1);
+}
+
+.popper {
+    position: absolute;
+    cursor: pointer;
+    right: -3rem;
+    bottom: 0;
+    width: 3rem;
+    height: 3rem;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+    
+    border-top-right-radius: 5pt;
+    border-bottom-right-radius: 5pt;
+    padding: .5rem .6rem;
+    box-sizing: border-box;
+    transition: right 0.2s ease 0s;
+}
+
+.popper img {
+    width: 2rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease 0s;
+}
+
+.popper img:hover {
+    opacity: 1;
+    transform: rotate(25deg);
+}
+
+.popper:hover {
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.07), 5px 0px 5px rgba(0, 0, 0, 0.03)
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 99%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 99%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 99%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
 
 /* Actions */
 
